@@ -7,28 +7,45 @@ const estudiantes = [{
         carrera: "Matematico",
         semestre: 2,
         sexo: "F",
-        materias: [{nombre: 'matematicas 1', nota: 2}]
+        materias: [{
+            nombre: 'matematicas 1',
+            nota: 2
+        }]
     },
     {
         nombre: "Patricia",
         carrera: "Inginerio",
         semestre: 10,
         sexo: "F",
-        materias: [{nombre: 'ingles', nota: 5}]
+        materias: [{
+            nombre: 'ingles',
+            nota: 5
+        }]
     },
     {
         nombre: "Guille",
         carrera: "Derecho",
         semestre: 5,
         sexo: "M",
-        materias: [{nombre: 'penal', nota: 4}]
+        materias: [{
+            nombre: 'penal',
+            nota: 4
+        }]
     },
     {
         nombre: "Leon",
         carrera: "Artes",
         semestre: 7,
         sexo: "M",
-        materias: [{nombre: 'dibujo', nota: 4.5}, { nombre: 'sociales', nota: 5}]
+        materias: [{
+                nombre: 'dibujo',
+                nota: 4.5
+            },
+            {
+                nombre: 'sociales',
+                nota: 5
+            }
+        ]
     },
 ];
 
@@ -67,36 +84,58 @@ for (let index = 0; index < ciudades.length; index++) {
 
 estudiantes.map(c => console.log(c.nombre));
 
-const respuesta = estudiantes.filter( c => c.semestre >= 5).map(c => c.nombre);
+const respuesta = estudiantes.filter(c => c.semestre >= 5).map(c => c.nombre);
 
 const respuesta = estudiantes
-.filter( 
-    c => c.semestre >= 5 && c.materias.filter(m => m.nota > 2).length > 0      
-).map( c => {
-    return {
-        nombre: c.nombre,
-        materia: c.materias.map( k => k.nombre).join(', ')
-    };
-});
+    .filter(
+        c => c.semestre >= 5 && c.materias.filter(m => m.nota > 2).length > 0
+    ).map(c => {
+        return {
+            nombre: c.nombre,
+            materia: c.materias.map(k => k.nombre).join(', ')
+        };
+    });
 
- console.log(respuesta);
+console.log(respuesta);
 
 
 // Ejemplo ciclo while y el do-while
 
 let n = 0;
 
-while( n < 3){
+while (n < 3) {
     console.log(n);
-    n ++;
+    n++;
 }
 
-let i = 0, resultado = 0;
+let i = 0,
+    resultado = 0;
 
 do {
 
     i++;
     resultado = resultado + i;
-    
+
 } while (i < 5);
+
+// Ejemplos find, indexOf, findIndex
+
+let estudiante = estudiantes.find( c => c.nombre === 'Leon');
+
+console.log(estudiante);
+
+
+let estadoFactura = 7;
+
+const ESTADOS = [1, 2, 3, 5, 8];
+
+
+let existeEstado = estudiantes.indexOf(estadoFactura);
+
+console.log(existeEstado);
+
+
+console.log(ESTADOS.findIndex( x => x > 3));
+
+//let estudiante = estudiantes.find( c => c.nombre === 'Leon');
 

@@ -1,0 +1,14 @@
+{
+  "name": "prueba-consumo-apis",
+  "version": "1.0.0",
+  "description": "Prueba de como consumir API Rest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alejandro Correa",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
