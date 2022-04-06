@@ -1,0 +1,3 @@
+
+const { getPrimerNombre } = require('./funciones');
+
