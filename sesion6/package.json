@@ -4,7 +4,8 @@
   "description": "uso de express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app/server.js"
   },
   "author": "Alejandro Correa",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
     "sequelize": "^6.18.0"
   }
 }
