@@ -17,7 +17,8 @@ const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.estudiantes = require('./estudiantes.model')(sequelize, Sequelize);
+db.alejandroCorrea = require('./alejandroCorrea.models')(sequelize, Sequelize);
 
 module.exports = db;
 
+ 

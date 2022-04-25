@@ -50,21 +50,22 @@ app.use(express.urlencoded( {extends: true} ));
 //     res.json({ mensaje: 'Welcome!!! to my first API Method POST'});
 // });
 
-app.get('/',(req, res) => {
+// app.get('/',(req, res) => {
     
-    res.json({ mensaje: 'Welcome!!! to my first API Method GET'});
-});
+//     res.json({ mensaje: 'Welcome!!! to my first API Method GET'});
+// });
 
-app.post('/',(req, res) => {
+// app.post('/',(req, res) => {
     
-    res.json({ mensaje: 'Welcome!!! to my first API Method POST'});
-});
+//     res.json({ mensaje: 'Welcome!!! to my first API Method POST'});
+// });
 
+require('./routes/alejandroCorrea.routes')(app);
 
 const PORT = 8081; 
 
 db.sequelize.sync({force: false}).then(()=> { // Si la variable force está en true borra todo, debe esta eb false
-    console.log('eliminar db');
+    console.log('sequelize.... db');
 });
 
 // app.listen( PORT, () => {

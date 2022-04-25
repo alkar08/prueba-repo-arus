@@ -5,9 +5,9 @@ module.exports = {
     DB: 'nodejs',
     dialect: 'mysql',
     pool: {
-        max: 5,
+        max: 15,
         min: 0,
-        acquire: 3000,
-        idle: 1000
+        acquire: 6000,
+        idle: 3000
     },
 };
